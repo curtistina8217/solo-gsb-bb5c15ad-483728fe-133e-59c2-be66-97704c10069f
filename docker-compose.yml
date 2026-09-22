@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    container_name: interview-annotator
+    ports:
+      - "8000:8000"
+    volumes:
+      - annotator-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  annotator-data:
